@@ -38,6 +38,19 @@ block content
               +card('img/variants/img-2.jpg', 'Алмазная мозаика')
             .col-md-4 
               +card('img/variants/img-3.jpg', 'Картины по номерам')
-      // /variants  
+      // /variants 
+
+      // insruction
+      .insruction
+        .container 
+          .insruction__block 
+            h2.insruction__title У тебя уже есть набор "Селфи-конструктор"?
+            .insruction__btn 
+              .btn.btn--yellow.btn--has-icon 
+                i 
+                  svg(class="icon-file")
+                    use(xlink:href="img/sprite.svg#file")
+                | получи инструкцию
+      // /insruction
 
     include core/footer.pug

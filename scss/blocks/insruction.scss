@@ -1,0 +1,23 @@
+/* insruction */
+.insruction { 
+  margin-bottom: 120px;
+  &__block {
+    display: flex;
+    align-items: center;
+    min-height: 230px;
+    padding: 36px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 30px;
+  }
+  &__title {
+    max-width: 480px;
+    margin-right: auto;
+    font-size: 40px;
+    line-height: 120%;
+    font-weight: normal;
+  }
+  &__btn {
+    
+  }
+}
+/* /insruction */
