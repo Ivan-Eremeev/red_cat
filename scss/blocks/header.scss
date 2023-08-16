@@ -1,0 +1,91 @@
+/* header */
+.header { 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 0;
+  background-color: $secondary_color;
+  .container {
+    display: flex;
+    align-items: center;
+  }
+  &__logo {
+    display: block;
+    margin-right: auto;
+    img {
+      display: block;
+    }
+  }
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+  &__nav {
+    margin-right: 24px;
+    ul {
+      display: flex;
+      align-items: center;
+      margin-left: -22px;
+      li {
+        padding-left: 22px;
+        a {
+          font-size: 20px;
+          font-weight: 500;
+          line-height: 140%;
+          color: #fff;
+          @include media-breakpoint-up(md) {
+            &:hover {
+              color: $primary_color;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__social {
+    ul {
+      display: flex;
+      align-items: center;
+      margin-left: -22px;
+      li {
+        padding-left: 22px;
+        a {
+          fill: #fff;
+          svg {
+            width: 24px;
+            height: 24px;
+          }
+          @include media-breakpoint-up(md) {
+            &:hover {
+              fill: $primary_color;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__hamburger {
+    
+  }
+}
+
+// stiky menu
+#headerSticky {
+  &.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    animation: showStyky 0.5s;
+  }
+}
+@keyframes showStyky {
+  0% {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0)
+  }
+}
+/* /header */

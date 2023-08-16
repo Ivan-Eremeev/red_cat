@@ -1,0 +1,43 @@
+extends core/base.pug
+
+block title 
+  title Главная
+
+block content
+
+  .page 
+
+    include core/header.pug
+
+    include blocks/card
+
+    .content 
+
+      // welcome
+      .welcome
+        .container 
+          .welcome__content 
+            h1.welcome__title Создай свой арт-объект
+            .welcome__text Загрузи любое изображение из своей галереи и посмотри, как будет выглядеть твоя картина!
+            .welcome__btn 
+              .btn.btn--yellow.btn--has-icon
+                i
+                  svg(class="icon-mount")
+                    use(xlink:href="img/sprite.svg#mount")
+                | загрузи фото
+          .welcome__media 
+      // /welcome
+
+      // variants 
+      .variants 
+        .container 
+          .row 
+            .col-md-4 
+              +card('img/variants/img-1.jpg', 'Конструктор')
+            .col-md-4 
+              +card('img/variants/img-2.jpg', 'Алмазная мозаика')
+            .col-md-4 
+              +card('img/variants/img-3.jpg', 'Картины по номерам')
+      // /variants  
+
+    include core/footer.pug

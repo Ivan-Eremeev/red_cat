@@ -1,0 +1,32 @@
+/* welcome */
+.welcome { 
+  padding-top: 70px;
+  margin-bottom: 80px;
+  .container {
+    display: flex;
+  }
+  &__content {
+    width: 715px;
+    padding-right: 50px;
+    margin-right: 50px;
+    border-right: 1px solid $primary_color;
+  }
+  &__title {
+    font-size: 96px;
+    font-weight: 900;
+    line-height: 120%;
+    margin-bottom: 45px;
+  }
+  &__text {
+    font-size: 24px;
+    line-height: 133%;
+    margin-bottom: 30px;
+  }
+  &__btn {
+    
+  }
+  &__media {
+
+  }
+}
+/* /welcome */
