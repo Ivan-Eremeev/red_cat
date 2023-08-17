@@ -249,6 +249,73 @@ window.onload = function () {
   }
   scrollUp();
 
+  // Редактор изображениея 
+  let image = document.getElementById('editImg');
+  if (image) {
+    let zoomIn = document.getElementById('zoomIn');
+    let zoomOut = document.getElementById('zoomOut');
+    let rotateRight = document.getElementById('rotateRight');
+    let rotateLeft = document.getElementById('rotateLeft');
+    let inputImage = document.getElementById('inputImage');
+    let uploadedImageURL;
+    let options = {
+      aspectRatio: 3 / 4,
+      viewMode: 2,
+      guides: false,
+    }
+    let cropper = new Cropper(image, options);
+    // Загрузка изображения
+    if (URL) {
+      inputImage.onchange = function () {
+        var files = this.files;
+        var file;
+
+        if (files && files.length) {
+          file = files[0];
+
+          if (/^image\/\w+/.test(file.type)) {
+            uploadedImageType = file.type;
+            uploadedImageName = file.name;
+
+            if (uploadedImageURL) {
+              URL.revokeObjectURL(uploadedImageURL);
+            }
+
+            image.src = uploadedImageURL = URL.createObjectURL(file);
+
+            if (cropper) {
+              cropper.destroy();
+            }
+
+            cropper = new Cropper(image, options);
+            inputImage.value = null;
+          } else {
+            window.alert('Пожалуйста загрузите файл изображения');
+          }
+        }
+      };
+    } else {
+      inputImage.disabled = true;
+      inputImage.parentNode.className += ' disabled';
+    }
+    // Увеличение
+    zoomIn.addEventListener('click', function () {
+      cropper.zoom(0.2);
+    });
+    // Уменьшение
+    zoomOut.addEventListener('click', function () {
+      cropper.zoom(-0.2);
+    });
+    // Поворот по часовой
+    rotateRight.addEventListener('click', function () {
+      cropper.rotate(90);
+    });
+    // Поворот против часовой
+    rotateLeft.addEventListener('click', function () {
+      cropper.rotate(-90);
+    });
+  }
+
   // // Показать еще пункты списка
   // function showMoreFilters(list, count) {
   //   let btn = list.find('.js-more-btn');

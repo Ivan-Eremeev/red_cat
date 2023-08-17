@@ -1,0 +1,60 @@
+extends core/base.pug
+
+block title 
+  title Редактор
+
+block content
+
+  .page 
+
+    include core/header.pug
+
+    .content 
+
+      // breadcrumbs
+      .breadcrumbs
+        .container 
+          ul 
+            li 
+              a(href="#") Главная
+            li 
+              span Конструктор
+      // /breadcrumbs
+
+      // editor
+      .editor
+        .container 
+          .editor__title Выдели максимально крупно желаемую зону, регулируя зону кадрирования
+          .editor__container 
+            .editor__img 
+              img(src="img/noimg.jpg", alt="")#editImg
+            .editor__controlls 
+              label.editor__controlls-btn 
+                input(type="file")#inputImage
+                svg(class="icon-download")
+                  use(xlink:href="img/sprite.svg#download")
+              .editor__controlls-btn#zoomIn
+                svg(class="icon-plus")
+                  use(xlink:href="img/sprite.svg#plus")
+              .editor__controlls-btn#zoomOut
+                svg(class="icon-minus")
+                  use(xlink:href="img/sprite.svg#minus")
+              .editor__controlls-btn#rotateRight
+                svg(class="icon-next")
+                  use(xlink:href="img/sprite.svg#next")
+              .editor__controlls-btn#rotateLeft
+                svg(class="icon-prev")
+                  use(xlink:href="img/sprite.svg#prev")
+            .editor__buttons 
+              a(href="#").editor__btn.editor__btn--prev 
+                i
+                  svg(class="icon-arrow")
+                    use(xlink:href="img/sprite.svg#arrow")
+                | Назад
+              a(href="#").editor__btn.editor__btn--next Далее
+                i
+                  svg(class="icon-arrow")
+                    use(xlink:href="img/sprite.svg#arrow")
+      // /editor
+
+    include core/footer.pug
