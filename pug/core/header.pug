@@ -3,7 +3,9 @@ header#headerSticky.header
   .container 
     a(href="#").header__logo 
       img(src="img/logo.svg", alt="")
-    .header__container 
+    .header__container#menuMobile
+      a(href="#").header__logo.header__logo--mobile.d-md-none.d-block
+        img(src="img/logo.svg", alt="")
       nav.header__nav 
         ul 
           li 
@@ -22,5 +24,8 @@ header#headerSticky.header
             a(href="#") 
               svg(class="icon-telega")
                 use(xlink:href="img/sprite.svg#telega")
-    .header__hamburger 
+      .header__close.js-drop-close(data-drop="menuMobile")
+    .header__hamburger.js-drop-menu(data-drop="menuMobile").hamburger.hamburger--squeeze 
+      .hamburger-box 
+        .hamburger-inner
 //	/header

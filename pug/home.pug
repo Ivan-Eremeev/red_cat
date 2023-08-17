@@ -18,35 +18,49 @@ block content
         .container 
           .welcome__content 
             h1.welcome__title Создай свой арт-объект
+            .welcome__media.d-md-none.d-block
             .welcome__text Загрузи любое изображение из своей галереи и посмотри, как будет выглядеть твоя картина!
             .welcome__btn 
-              .btn.btn--yellow.btn--has-icon
+              a(href="#").btn.btn--yellow.btn--has-icon
                 i
                   svg(class="icon-mount")
                     use(xlink:href="img/sprite.svg#mount")
                 | загрузи фото
-          .welcome__media 
+          .welcome__media.d-md-block.d-none
       // /welcome
 
-      // variants 
-      .variants 
-        .container 
-          .row 
-            .col-md-4 
-              +card('img/variants/img-1.jpg', 'Конструктор')
-            .col-md-4 
-              +card('img/variants/img-2.jpg', 'Алмазная мозаика')
-            .col-md-4 
-              +card('img/variants/img-3.jpg', 'Картины по номерам')
-      // /variants 
-
       // insruction
-      .insruction
+      .insruction.d-md-none.d-block
         .container 
           .insruction__block 
             h2.insruction__title У тебя уже есть набор "Селфи-конструктор"?
             .insruction__btn 
-              .btn.btn--yellow.btn--has-icon 
+              a(href="#").btn.btn--yellow.btn--has-icon 
+                i 
+                  svg(class="icon-file")
+                    use(xlink:href="img/sprite.svg#file")
+                | получи инструкцию
+      // /insruction
+
+      // variants 
+      .variants 
+        .container 
+          .row.gy-2.gy-md-3.justify-content-center
+            .col-lg-4.col-md-6 
+              +card('img/variants/img-1.jpg', 'Конструктор')
+            .col-lg-4.col-md-6 
+              +card('img/variants/img-2.jpg', 'Алмазная мозаика')
+            .col-lg-4.col-md-6 
+              +card('img/variants/img-3.jpg', 'Картины по номерам')
+      // /variants 
+
+      // insruction
+      .insruction.d-md-block.d-none
+        .container 
+          .insruction__block 
+            h2.insruction__title У тебя уже есть набор "Селфи-конструктор"?
+            .insruction__btn 
+              a(href="#").btn.btn--yellow.btn--has-icon 
                 i 
                   svg(class="icon-file")
                     use(xlink:href="img/sprite.svg#file")

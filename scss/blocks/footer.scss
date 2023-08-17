@@ -156,5 +156,64 @@
       }
     }
   }
+  &__up {
+    display: none;
+  }
+  @include media-breakpoint-down(md) {
+    padding: 24px 0 30px;
+    &__top {
+      display: block;
+      margin-bottom: 24px + 8px;
+    }
+    &__title {
+      font-size: 32px;
+      margin-bottom: 24px;
+      span {
+        font-size: 14px;
+      }
+    }
+    &__contact {
+      display: none;
+    }
+    &__btn {
+      a {
+        padding: 24px 36px;
+      }
+    }
+    &__nav {
+      display: none;
+    }
+    &__social {
+      display: none;
+    }
+    &__copyright {
+      margin-bottom: 8px;
+    }
+    &__bottom {
+      display: block;
+      position: relative;
+    }
+    &__policy {
+      padding-top: 40px;
+      border-top: 1px solid #343132;
+    }
+    &__up {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 60px;
+      height: 60px;
+      position: absolute;
+      bottom: -20px;
+      right: 0;
+      cursor: pointer;
+      user-select: none;
+      fill: #626061;
+      svg {
+        width: 27px;
+        height: 17px;
+      }
+    }
+  }
 }
 /* /footer */

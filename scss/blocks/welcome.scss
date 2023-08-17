@@ -6,7 +6,7 @@
     display: flex;
   }
   &__content {
-    width: 715px;
+    max-width: 715px;
     padding-right: 50px;
     margin-right: 50px;
     border-right: 1px solid $primary_color;
@@ -27,6 +27,71 @@
   }
   &__media {
 
+  }
+  @include media-breakpoint-down(xl) {
+    &__content {
+      max-width: 515px;
+    }
+    &__title {
+      font-size: 60px;
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    &__content {
+      max-width: 420px;
+    }
+    &__title {
+      font-size: 54px;
+    }
+  }
+  @include media-breakpoint-down(md) {
+    padding-top: 10px;
+    margin-bottom: 32px;
+    .container {
+      flex-wrap: wrap;
+    }
+    &__content {
+      max-width: none;
+      width: 100%;
+      padding-right: 0;
+      margin-right: 0;
+      border: none;
+    }
+    &__title {
+      padding-bottom: 40px;
+      font-size: 40px;
+      font-weight: 900;
+      line-height: 125%;
+      margin-bottom: 40px;
+      position: relative;
+      &:after {
+        content: '';
+        display: block;
+        height: 2px;
+        background-color: $primary_color;
+        position: absolute;
+        bottom: 0;
+        left: 7%;
+        right: 7%;
+      }
+    }
+    &__media {
+      width: 100%;
+      min-height: 213px;
+      text-align: center;
+    }
+    &__text {
+      font-size: 20px;
+      line-height: 32px;
+      margin-bottom: 16px;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    &__btn {
+      .btn {
+        width: 100%;
+      }
+    }
   }
 }
 /* /welcome */
