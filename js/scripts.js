@@ -100,6 +100,7 @@ window.onload = function () {
       aspectRatio: 3 / 4,
       viewMode: 2,
       guides: false,
+      zoomOnWheel: false,
     }
     let cropper = new Cropper(image, options);
     // Загрузка изображения
