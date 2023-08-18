@@ -19,6 +19,10 @@ block content
           .welcome__content 
             h1.welcome__title Создай свой арт-объект
             .welcome__media.d-md-none.d-block
+              .welcome__media-inner
+                .twentytwentySlider
+                  img(src="img/welcome_before.jpg", alt="")
+                  img(src="img/welcome_after.jpg", alt="")
             .welcome__text Загрузи любое изображение из своей галереи и посмотри, как будет выглядеть твоя картина!
             .welcome__btn 
               a(href="#").btn.btn--yellow.btn--has-icon
@@ -27,6 +31,10 @@ block content
                     use(xlink:href="img/sprite.svg#mount")
                 | загрузи фото
           .welcome__media.d-md-block.d-none
+            .welcome__media-inner
+              .twentytwentySlider
+                img(src="img/welcome_before.jpg", alt="")
+                img(src="img/welcome_after.jpg", alt="")
       // /welcome
 
       // insruction

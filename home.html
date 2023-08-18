@@ -9,6 +9,7 @@
 		<meta name="robots" content="noindex, nofollow">
 		<title>Главная</title>
 		<link rel="stylesheet" href="css/plugins/cropper.min.css">
+		<link rel="stylesheet" href="css/plugins/twentytwenty.css">
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body> 
@@ -54,14 +55,22 @@
 					<div class="container"> 
 						<div class="welcome__content"> 
 							<h1 class="welcome__title">Создай свой арт-объект</h1>
-							<div class="welcome__media d-md-none d-block"></div>
+							<div class="welcome__media d-md-none d-block">
+								<div class="welcome__media-inner">
+									<div class="twentytwentySlider"><img src="img/welcome_before.jpg" alt=""><img src="img/welcome_after.jpg" alt=""></div>
+								</div>
+							</div>
 							<div class="welcome__text">Загрузи любое изображение из своей галереи и посмотри, как будет выглядеть твоя картина!</div>
 							<div class="welcome__btn"> <a class="btn btn--yellow btn--has-icon" href="#"><i>
 										<svg class="icon-mount">
 											<use xlink:href="img/sprite.svg#mount"></use>
 										</svg></i>загрузи фото</a></div>
 						</div>
-						<div class="welcome__media d-md-block d-none"></div>
+						<div class="welcome__media d-md-block d-none">
+							<div class="welcome__media-inner">
+								<div class="twentytwentySlider"><img src="img/welcome_before.jpg" alt=""><img src="img/welcome_after.jpg" alt=""></div>
+							</div>
+						</div>
 					</div>
 				</div>
 				<!-- /welcome-->
@@ -184,6 +193,8 @@
 		</div>
 		<script src="js/jquery.min.js"> </script>
 		<script src="js/plugins/cropper.min.js"> </script>
+		<script src="js/plugins/jquery.event.move.js"> </script>
+		<script src="js/plugins/jquery.twentytwenty.js"> </script>
 		<script src="js/scripts.js"></script>
 	</body>
 </html>
