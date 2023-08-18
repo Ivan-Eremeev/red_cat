@@ -98,7 +98,7 @@ window.onload = function () {
     let uploadedImageURL;
     let options = {
       aspectRatio: 3 / 4,
-      viewMode: 2,
+      viewMode: 3,
       guides: false,
       zoomOnWheel: false,
     }
