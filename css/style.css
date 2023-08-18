@@ -7049,7 +7049,6 @@ body.lock {
   margin-right: auto;
 }
 .editor__img-wrap {
-  height: 500px;
   padding: 5px;
   border: 6px solid #FFF;
   -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
@@ -7241,6 +7240,16 @@ body.lock {
   .editor__btn i svg {
     width: 24px;
     height: 24px;
+  }
+  .editor__img {
+    min-height: 370px;
+    max-height: 370px;
+  }
+}
+@media (max-width: 575.98px) {
+  .editor__img {
+    min-height: 250px;
+    max-height: 250px;
   }
 }
 

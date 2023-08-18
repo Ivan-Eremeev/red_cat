@@ -14,7 +14,6 @@
     margin-right: auto;
   }
   &__img-wrap {
-    height: 500px;
     padding: 5px;
     border: 6px solid #FFF;
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
@@ -162,6 +161,16 @@
           height: 24px;
         }
       }
+    }
+    &__img {
+      min-height: 370px;
+      max-height: 370px;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    &__img {
+      min-height: 250px;
+      max-height: 250px;
     }
   }
 }
