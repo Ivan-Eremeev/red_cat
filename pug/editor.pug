@@ -26,8 +26,9 @@ block content
         .container 
           .editor__title Выдели максимально крупно желаемую зону, регулируя зону кадрирования
           .editor__container 
-            .editor__img 
-              img(src="img/noimg.jpg", alt="")#editImg
+            .editor__img-wrap 
+              .editor__img 
+                img(src="img/noimg.jpg", alt="")#editImg
             .editor__controlls 
               label.editor__controlls-btn 
                 input(type="file")#inputImage
