@@ -7049,11 +7049,16 @@ body.lock {
   margin-right: auto;
 }
 .editor__img-wrap {
+  height: 500px;
   padding: 5px;
   border: 6px solid #FFF;
   -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
   margin-bottom: 20px;
+}
+.editor__img {
+  min-height: 500px;
+  max-height: 500px;
 }
 .editor__controlls {
   display: -webkit-box;
