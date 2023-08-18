@@ -156,7 +156,10 @@ window.onload = function () {
 
   // Слайдер до и после
   if ($('.twentytwentySlider').length) {
-    $(".twentytwentySlider").twentytwenty();
+    $(".twentytwentySlider").twentytwenty({
+      no_overlay: true,
+      click_to_move: true,
+    });
   }
 
 }
