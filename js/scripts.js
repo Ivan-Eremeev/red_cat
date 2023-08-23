@@ -163,4 +163,13 @@ window.onload = function () {
     });
   }
 
+  // Маска для пароля | Inputmask
+  if ($('#passwordInput').length) {
+    $('#passwordInput').inputmask({
+      mask: '999-999-999',
+      placeholder: 'X',
+      clearMaskOnLostFocus: false
+    });
+  }
+
 }

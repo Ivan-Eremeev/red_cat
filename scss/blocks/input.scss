@@ -1,0 +1,24 @@
+/* input */
+.input { 
+  input {
+    width: 100%;
+    height: 90px;
+    padding: 0 32px;
+    background-color: #fff;
+    border-radius: 16px;
+    border: 1px solid #CFCFCF;
+    outline: none;
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 2.52px;
+    color: #CACACA;
+    text-align: center;
+  }
+  @include media-breakpoint-down(md) {
+    input {
+      height: 70px;
+      padding: 0 16px;
+    }
+  }
+}
+/* /input */
