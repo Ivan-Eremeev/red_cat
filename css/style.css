@@ -6459,6 +6459,7 @@ body.lock {
 @media (min-width: 769px) {
   .btn--yellow:hover {
     background-color: #fdc746;
+    color: #fff;
   }
 }
 .btn--black {
@@ -6469,6 +6470,16 @@ body.lock {
   .btn--black:hover {
     background-color: #FCB814;
     color: #201D1E;
+  }
+}
+.btn--gray {
+  background-color: #ddd;
+  color: #201D1E;
+}
+@media (min-width: 769px) {
+  .btn--gray:hover {
+    background-color: #201D1E;
+    color: #fff;
   }
 }
 @media (max-width: 1199.98px) {
@@ -7439,6 +7450,7 @@ body.lock {
   margin-top: 30px;
 }
 .quiz__images-item {
+  border: 6px solid #FFF;
   -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
   position: relative;
@@ -7517,9 +7529,94 @@ body.lock {
     padding-right: 7px;
     margin-top: 14px;
   }
+  .quiz__images-item {
+    border-width: 3px;
+  }
 }
 
 /* /quiz */
+/* final */
+.final {
+  padding: 80px 0 100px;
+}
+.final__container {
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.final__title {
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 48px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.final__images {
+  margin-bottom: 50px;
+}
+.final__images .row {
+  margin-top: -30px;
+}
+.final__images .row > * {
+  margin-top: 30px;
+}
+.final__img {
+  display: block;
+  border: 6px solid #FFF;
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+.final__img:after {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+.final__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.final__buttons .btn {
+  width: 100%;
+  margin-bottom: 50px;
+}
+.final__buttons .btn:last-child {
+  margin-bottom: 0;
+}
+@media (max-width: 768.98px) {
+  .final {
+    padding: 15px 0 55px;
+  }
+  .final__title {
+    font-size: 20px;
+    line-height: 32px;
+    margin-bottom: 20px;
+  }
+  .final__images {
+    margin-bottom: 20px;
+  }
+  .final__images .row {
+    margin-left: -7px;
+    margin-right: -7px;
+    margin-top: -14px;
+  }
+  .final__images .row > * {
+    padding-left: 7px;
+    padding-right: 7px;
+    margin-top: 14px;
+  }
+  .final__buttons .btn {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+}
+
+/* /final */
 /* footer */
 .footer {
   padding: 80px 0 40px;

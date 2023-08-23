@@ -42,6 +42,7 @@
     @include media-breakpoint-up(md) {
       &:hover {
         background-color: lighten($primary_color, 10%);
+        color: #fff;
       }
     }
   }
@@ -52,6 +53,16 @@
       &:hover {
         background-color: $primary_color;
         color: $text_color;
+      }
+    }
+  }
+  &--gray {
+    background-color: #ddd;
+    color: $text_color;
+    @include media-breakpoint-up(md) {
+      &:hover {
+        background-color: $secondary_color;
+        color: #fff;
       }
     }
   }
