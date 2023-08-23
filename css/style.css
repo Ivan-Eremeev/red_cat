@@ -7566,6 +7566,9 @@ body.lock {
   -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
   position: relative;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 .final__img:after {
   content: "";
@@ -7580,6 +7583,12 @@ body.lock {
   position: absolute;
   top: 0;
   left: 0;
+}
+@media (min-width: 769px) {
+  .final__img:hover {
+    -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.2);
+  }
 }
 .final__buttons .btn {
   width: 100%;
