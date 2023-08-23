@@ -1,0 +1,64 @@
+extends core/base.pug
+
+block title 
+  title Инструкция
+
+block content
+
+  .page 
+
+    include core/header.pug
+
+    .content 
+
+      // breadcrumbs
+      .breadcrumbs
+        .container 
+          ul 
+            li 
+              a(href="#") Главная
+            li 
+              span Конструктор
+      // /breadcrumbs
+
+      // quiz
+      .quiz
+        .container 
+          .row 
+
+            .col-lg-5.d-lg-block.d-none
+              .quiz__img 
+                img(src="img/quiz_photo.jpg", alt="")
+
+            .col-lg-6.offset-lg-1
+              .quiz__title Как выбрать фото?
+
+              ol.quiz__list 
+                li Избегай однотонного фона
+                li Максимально приблизь крупные объекты или лицо
+                li Старайся выбирать контрастные фотографии
+
+              .quiz__images 
+                .row.row-cols-2
+                  .col 
+                    .quiz__images-item
+                      img(src="img/instruction/img-1.jpg", alt="")
+                  .col 
+                    .quiz__images-item
+                      img(src="img/instruction/img-2.jpg", alt="")
+                  .col 
+                    .quiz__images-item
+                      img(src="img/instruction/img-3.jpg", alt="")
+                  .col 
+                    .quiz__images-item
+                      img(src="img/instruction/img-4.jpg", alt="")
+
+              .quiz__btn 
+                a(href="editor.html").btn.btn--yellow.btn--has-icon 
+                  i 
+                    img(src="img/hand-ok.png", alt="")
+                  | ок, понятно
+              
+      // /quiz
+
+    include core/footer.pug
