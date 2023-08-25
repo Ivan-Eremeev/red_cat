@@ -97,7 +97,7 @@ window.onload = function () {
     let inputImage = document.getElementById('inputImage');
     let uploadedImageURL;
     let options = {
-      aspectRatio: 3 / 4,
+      aspectRatio: 1 / 1,
       viewMode: 3,
       guides: false,
       zoomOnWheel: false,

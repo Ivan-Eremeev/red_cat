@@ -6,7 +6,7 @@
   &__top {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
   }
   &__middle {
     display: flex;
@@ -173,7 +173,7 @@
       }
     }
     &__contact {
-      display: none;
+      // display: none;
     }
     &__btn {
       a {

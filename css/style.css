@@ -7639,7 +7639,7 @@ body.lock {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 }
 .footer__middle {
   display: -webkit-box;
@@ -7823,9 +7823,6 @@ body.lock {
   }
   .footer__title span {
     font-size: 14px;
-  }
-  .footer__contact {
-    display: none;
   }
   .footer__btn a {
     padding: 24px 36px;
