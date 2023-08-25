@@ -35,10 +35,10 @@ body {
 }
 .content {
   flex-grow: 1;
-  padding-top: 138px;
-  @include media-breakpoint-down(md) {
-    padding-top: 60px;
-  }
+  // padding-top: 138px;
+  // @include media-breakpoint-down(md) {
+  //   padding-top: 60px;
+  // }
 }
 .navpage {
   padding: 100px 0;
