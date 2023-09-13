@@ -22,6 +22,14 @@
   &__img {
     min-height: 500px;
     max-height: 500px;
+    background-image: url(../img/noimg.jpg);
+    background-size: cover;
+    background-position: center;
+    .cropper-bg {
+      width: 100%;
+      background-image: none;
+      background-color: #bbb;
+    }
   }
   &__controlls {
     display: flex;

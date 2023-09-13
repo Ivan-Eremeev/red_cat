@@ -98,9 +98,14 @@ window.onload = function () {
     let uploadedImageURL;
     let options = {
       aspectRatio: 1 / 1,
-      viewMode: 3,
+      viewMode: 1,
       guides: false,
       zoomOnWheel: false,
+      dragMode: 'move',
+      cropBoxMovable: false,
+      cropBoxResizable: false,
+      autoCropArea: 1,
+      toggleDragModeOnDblclick: false,
     }
     let cropper = new Cropper(image, options);
     // Загрузка изображения

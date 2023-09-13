@@ -7045,6 +7045,14 @@ body.lock {
 .editor__img {
   min-height: 500px;
   max-height: 500px;
+  background-image: url(../img/noimg.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.editor__img .cropper-bg {
+  width: 100%;
+  background-image: none;
+  background-color: #bbb;
 }
 .editor__controlls {
   display: -webkit-box;
