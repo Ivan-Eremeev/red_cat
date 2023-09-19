@@ -109,6 +109,17 @@ window.onload = function () {
       autoCropArea: 1,
       toggleDragModeOnDblclick: false,
     }
+    let optionsReverse = {
+      aspectRatio: 4 / 3,
+      viewMode: 1,
+      guides: false,
+      zoomOnWheel: true,
+      dragMode: 'move',
+      cropBoxMovable: false,
+      cropBoxResizable: false,
+      autoCropArea: 1,
+      toggleDragModeOnDblclick: false,
+    }
     let cropper = new Cropper(image, options);
     // Загрузка изображения
     if (URL) {
@@ -163,10 +174,16 @@ window.onload = function () {
     // Поровот (вертикальная, горизонтальная)
     reverse.addEventListener('click', function () {
       if (! reverse.classList.contains('active')) {
-        cropper.rotate(90);
+        // cropper.setAspectRatio(4/3);
+        // cropper.reset();
+        cropper.destroy();
+        cropper = new Cropper(image, optionsReverse);
         reverse.classList.add('active');
       } else {
-        cropper.rotate(-90);
+        cropper.destroy();
+        cropper = new Cropper(image, options);
+        // cropper.setAspectRatio(ratio);
+        // cropper.reset();
         reverse.classList.remove('active');
       }
     });
