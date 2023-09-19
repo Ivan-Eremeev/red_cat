@@ -180,10 +180,10 @@ window.onload = function () {
         cropper = new Cropper(image, optionsReverse);
         reverse.classList.add('active');
       } else {
-        cropper.destroy();
-        cropper = new Cropper(image, options);
         // cropper.setAspectRatio(ratio);
         // cropper.reset();
+        cropper.destroy();
+        cropper = new Cropper(image, options);
         reverse.classList.remove('active');
       }
     });
