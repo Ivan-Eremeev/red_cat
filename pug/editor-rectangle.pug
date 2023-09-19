@@ -1,7 +1,7 @@
 extends core/base.pug
 
 block title 
-  title Редактор
+  title Редактор (прямоугольник)
 
 block content
 
@@ -28,7 +28,7 @@ block content
           .editor__container 
             .editor__img-wrap 
               .editor__img 
-                img(src="", alt="")#editImg
+                img(src="", alt="" data-ratio="3/4")#editImg
             .editor__controlls 
               label.editor__controlls-btn 
                 input(type="file")#inputImage
@@ -46,6 +46,9 @@ block content
               .editor__controlls-btn#rotateLeft
                 svg(class="icon-prev")
                   use(xlink:href="img/sprite.svg#prev")
+              .editor__controlls-btn#reverse
+                svg(class="icon-reverse")
+                  use(xlink:href="img/sprite.svg#reverse")
             .editor__buttons 
               a(href="instruction.html").editor__btn.editor__btn--prev 
                 i

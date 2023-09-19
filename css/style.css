@@ -7061,9 +7061,12 @@ body.lock {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   margin-bottom: 50px;
   margin-left: -16px;
   margin-right: -16px;
+  margin-top: -16px;
 }
 .editor__controlls-btn {
   display: -webkit-box;
@@ -7079,6 +7082,7 @@ body.lock {
   height: 52px;
   margin-left: 8px;
   margin-right: 8px;
+  margin-top: 16px;
   border-radius: 100%;
   background-color: #fff;
   -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);

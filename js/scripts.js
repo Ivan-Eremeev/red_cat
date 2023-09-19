@@ -90,17 +90,19 @@ window.onload = function () {
   // Редактор изображениея 
   let image = document.getElementById('editImg');
   if (image) {
+    let ratio = eval(image.dataset.ratio);
     let zoomIn = document.getElementById('zoomIn');
     let zoomOut = document.getElementById('zoomOut');
     let rotateRight = document.getElementById('rotateRight');
     let rotateLeft = document.getElementById('rotateLeft');
     let inputImage = document.getElementById('inputImage');
+    let reverse = document.getElementById('reverse');
     let uploadedImageURL;
     let options = {
-      aspectRatio: 1 / 1,
+      aspectRatio: ratio,
       viewMode: 1,
       guides: false,
-      zoomOnWheel: false,
+      zoomOnWheel: true,
       dragMode: 'move',
       cropBoxMovable: false,
       cropBoxResizable: false,
@@ -152,11 +154,21 @@ window.onload = function () {
     });
     // Поворот по часовой
     rotateRight.addEventListener('click', function () {
-      cropper.rotate(90);
+      cropper.rotate(10);
     });
     // Поворот против часовой
     rotateLeft.addEventListener('click', function () {
-      cropper.rotate(-90);
+      cropper.rotate(-10);
+    });
+    // Поровот (вертикальная, горизонтальная)
+    reverse.addEventListener('click', function () {
+      if (! reverse.classList.contains('active')) {
+        cropper.rotate(90);
+        reverse.classList.add('active');
+      } else {
+        cropper.rotate(-90);
+        reverse.classList.remove('active');
+      }
     });
   }
 
