@@ -24,14 +24,12 @@ block content
       // quiz
       .quiz
         .container 
-          .row 
+          .row.justify-content-center
 
-            .col-lg-5.d-lg-block.d-none
-              .quiz__img 
-                img(src="img/quiz_photo.jpg", alt="")
-
-            .col-xl-6.col-lg-7.offset-xl-1
-              .quiz__title Выберите размер и цветовое решение вашего набора
+            .col-xl-7.col-lg-8
+              .quiz__title.quiz__title--mark 
+                .quiz__title-num 1
+                span Выберите цветовое решение вашего набора
 
               .quiz__type 
 
@@ -42,21 +40,25 @@ block content
                       span.quiz__type-block
                         span.quiz__type-img 
                           img(src="img/quiz-variants-img.jpg", alt="")
-                        span.quiz__type-title Ч/Б
+                        span.quiz__type-title Классик
                   .col 
                     label.quiz__type-item 
                       input(type="radio", name="quizType")
                       span.quiz__type-block
                         span.quiz__type-img 
                           img(src="img/quiz-variants-img.jpg", alt="")
-                        span.quiz__type-title Сепия
+                        span.quiz__type-title Ретро
                   .col 
                     label.quiz__type-item 
                       input(type="radio", name="quizType")
                       span.quiz__type-block
                         span.quiz__type-img 
                           img(src="img/quiz-variants-img.jpg", alt="")
-                        span.quiz__type-title Розовый
+                        span.quiz__type-title Гранж
+
+                .quiz__title.quiz__title--mark 
+                  .quiz__title-num 2
+                  span Выберите размер вашего набора
 
                 .row.row-cols-md-2.row-cols-1
                   .col 
