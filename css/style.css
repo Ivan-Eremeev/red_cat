@@ -6541,9 +6541,20 @@ body.lock {
   align-items: center;
 }
 .header__logo {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   max-width: 220px;
   margin-right: auto;
+}
+.header__logo a {
+  display: block;
+}
+.header__logo a:first-child {
+  margin-right: 25px;
 }
 .header__logo img {
   display: block;
@@ -6622,6 +6633,9 @@ body.lock {
   }
   .header__logo {
     width: 130px;
+  }
+  .header__logo a:first-child {
+    margin-right: 15px;
   }
   .header__logo--mobile {
     position: absolute;
@@ -7763,8 +7777,19 @@ body.lock {
   }
 }
 .footer__logo {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   max-width: 220px;
+}
+.footer__logo a {
+  display: block;
+}
+.footer__logo a:first-child {
+  margin-right: 25px;
 }
 .footer__logo img {
   display: block;

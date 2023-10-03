@@ -12,9 +12,16 @@
     align-items: center;
   }
   &__logo {
-    display: block;
+    display: flex;
+    align-items: center;
     max-width: 220px;
     margin-right: auto;
+    a {
+      display: block;
+      &:first-child {
+        margin-right: 25px;
+      }
+    }
     img {
       display: block;
     }
@@ -80,6 +87,11 @@
     padding: 2px 0;
     &__logo {
       width: 130px;
+      a {
+        &:first-child {
+          margin-right: 15px;
+        }
+      }
       &--mobile {
         position: absolute;
         top: 20px;

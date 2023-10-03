@@ -87,8 +87,15 @@
     }
   }
   &__logo {
-    display: block;
+    display: flex;
+    align-items: center;
     max-width: 220px;
+    a {
+      display: block;
+      &:first-child {
+        margin-right: 25px;
+      }
+    }
     img {
       display: block;
     }
