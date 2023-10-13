@@ -25,21 +25,60 @@ block content
       .final
         .container 
           .final__container 
-            .final__title Выбери понравившийся вариант сборки
+            .final__title Выбери цвет набора
             .final__images 
-              .row.row-cols-2
-                .col 
-                  a(href="#").final__img 
-                    img(src="img/instruction/img-2.jpg", alt="")
-                .col 
-                  a(href="#").final__img 
-                    img(src="img/instruction/img-2.jpg", alt="")
-                .col 
-                  a(href="#").final__img 
-                    img(src="img/instruction/img-4.jpg", alt="")
-                .col 
-                  a(href="#").final__img 
-                    img(src="img/instruction/img-4.jpg", alt="")
+              .js-tabs
+                ul.final__triggers 
+                  li 
+                    a(href="#tab_1").final__trigger.js-tabs-trigger.active Классик
+                  li 
+                    a(href="#tab_2").final__trigger.js-tabs-trigger Ретро
+                  li 
+                    a(href="#tab_3").final__trigger.js-tabs-trigger Поп-арт
+                div
+                  .js-tabs-content.open(data-href="#tab_1")
+                    .row.row-cols-2
+                      .col 
+                        a(href="#").final__img 
+                          img(src="img/instruction/img-2.jpg", alt="")
+                      .col 
+                        a(href="#").final__img 
+                          img(src="img/instruction/img-2.jpg", alt="")
+                      .col 
+                        a(href="#").final__img 
+                          img(src="img/instruction/img-4.jpg", alt="")
+                      .col 
+                        a(href="#").final__img 
+                          img(src="img/instruction/img-4.jpg", alt="")
+                  .js-tabs-content(data-href="#tab_2")
+                    .row.row-cols-2
+                      .col 
+                        a(href="#").final__img 
+                          img(src="img/instruction/img-4.jpg", alt="")
+                      .col 
+                        a(href="#").final__img 
+                          img(src="img/instruction/img-4.jpg", alt="")
+                      .col 
+                        a(href="#").final__img 
+                          img(src="img/instruction/img-2.jpg", alt="")
+                      .col 
+                        a(href="#").final__img 
+                          img(src="img/instruction/img-2.jpg", alt="")
+                  .js-tabs-content(data-href="#tab_3")
+                    .row.row-cols-2
+                      .col 
+                        a(href="#").final__img 
+                          img(src="img/instruction/img-2.jpg", alt="")
+                      .col 
+                        a(href="#").final__img 
+                          img(src="img/instruction/img-4.jpg", alt="")
+                      .col 
+                        a(href="#").final__img 
+                          img(src="img/instruction/img-2.jpg", alt="")
+                      .col 
+                        a(href="#").final__img 
+                          img(src="img/instruction/img-4.jpg", alt="")
+
             .final__buttons 
               a(href="#").btn.btn--yellow.btn--has-icon 
                 i 

@@ -206,4 +206,33 @@ window.onload = function () {
     });
   }
 
+  // Табы
+  function tabs() {
+    const tabs = $('.js-tabs');
+    if (tabs.length) {
+      tabs.each(function () {
+        let triggers = $(this).find('.js-tabs-trigger');
+        let contents = $(this).find('.js-tabs-content');
+        let time = 300;
+        triggers.on('click', function (e) {
+          e.preventDefault();
+          let trigger = $(this);
+          let content = $('.js-tabs-content[data-href="' + trigger.attr('href') + '"]');
+          if (!trigger.hasClass('active')) {
+            triggers.removeClass('active');
+            trigger.addClass('active');
+            contents.hide();
+            contents.removeClass('open');
+            content.fadeIn(time, function () {
+              $(this).addClass('open');
+            });
+          } else {
+            return false;
+          }
+        })
+      });
+    }
+  }
+  tabs();
+
 }
