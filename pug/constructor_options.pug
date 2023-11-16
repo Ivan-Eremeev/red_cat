@@ -69,6 +69,36 @@ block content
             .options__cards 
               .row.justify-content-center.row-cols-xl-3.row-cols-md-2.row-cols-1
                 .col 
+                  mixin options_card(imgSrc, name, imgSrcMobile)
+                    a(href="#").options__card 
+                      .options__content 
+                        .options__img 
+                          picture 
+                            source(media="(max-width: 678px)", srcset= imgSrcMobile)
+                            img(src= imgSrc, alt="")
+                        .options__icons 
+                          .row
+                            .col-md-12.col-6
+                              .options__icon-item
+                                .options__icon 
+                                  img(src="img/options_icon/img-1.png", alt="")
+                                p 6 цветов
+                            .col-md-12.col-6
+                              .options__icon-item
+                                .options__icon 
+                                  img(src="img/options_icon/img-2.png", alt="")
+                                p 12 часов
+                            .col-md-12.col-6
+                              .options__icon-item
+                                .options__icon 
+                                  img(src="img/options_icon/img-3.png", alt="")
+                                p 6000
+                            .col-md-12.col-6
+                              .options__icon-item
+                                .options__icon 
+                                  img(src="img/options_icon/img-4.png", alt="")
+                                p 52×52 см
+                      .options__name= name
                   +options_card('img/options/img-4.png', 'Классик', 'img/options/img-4-mobile.png')
                 .col 
                   +options_card('img/options/img-5.png', 'Ретро', 'img/options/img-5-mobile.png')
