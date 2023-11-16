@@ -1,0 +1,84 @@
+extends core/base.pug
+
+block title 
+  title Варианты мозайка
+
+block content
+
+  .page 
+
+    include core/header.pug
+
+    .content 
+
+      // breadcrumbs
+      .breadcrumbs
+        .container 
+          ul 
+            li 
+              a(href="#") Главная
+            li 
+              span Конструктор
+      // /breadcrumbs
+
+      // options
+      .options
+        .container 
+          .options__section 
+            .options__title Алмазная мозаика 22х30
+            .options__cards 
+              .row.justify-content-center.row-cols-lg-3.row-cols-md-2.row-cols-1
+                .col 
+                  mixin options_card(imgSrc, name, imgSrcMobile)
+                    a(href="#").options__card 
+                      .options__content 
+                        .options__img 
+                          picture 
+                            source(media="(max-width: 678px)", srcset= imgSrcMobile)
+                            img(src= imgSrc, alt="")
+                        .options__icons 
+                          .row
+                            .col-md-12.col-6
+                              .options__icon-item
+                                .options__icon 
+                                  img(src="img/options_icon/img-1.png", alt="")
+                                p 6 цветов
+                            .col-md-12.col-6
+                              .options__icon-item
+                                .options__icon 
+                                  img(src="img/options_icon/img-2.png", alt="")
+                                p 18+ часов
+                            .col-md-12.col-6
+                              .options__icon-item
+                                .options__icon 
+                                  img(src="img/options_icon/img-5.svg", alt="")
+                                p 19 500
+                            .col-md-12.col-6
+                              .options__icon-item
+                                .options__icon 
+                                  img(src="img/options_icon/img-4.png", alt="")
+                                p 22×30 см
+                      .options__name= name
+                  +options_card('img/options/img-6.png', 'Классик', 'img/options/img-6-mobile.png')
+                .col 
+                  +options_card('img/options/img-7.png', 'Поп-арт', 'img/options/img-7-mobile.png')
+                .col 
+                  +options_card('img/options/img-8.png', 'Ретро', 'img/options/img-8-mobile.png')
+          .options__section 
+            .options__title Алмазная мозаика 30х40
+            .options__cards 
+              .row.justify-content-center.row-cols-lg-3.row-cols-md-2.row-cols-1
+                .col 
+                   +options_card('img/options/img-9.png', 'Классик', 'img/options/img-9-mobile.png')
+                .col 
+                  +options_card('img/options/img-10.png', 'Поп-арт', 'img/options/img-10-mobile.png')
+                .col 
+                  +options_card('img/options/img-11.png', 'Ретро', 'img/options/img-11-mobile.png')
+          a(href="#").options__btn
+            i
+              svg(class="icon-arrow")
+                use(xlink:href="img/sprite.svg#arrow")
+            | Назад
+      // /options
+
+    include core/footer.pug

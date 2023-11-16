@@ -1,0 +1,212 @@
+/* options */
+.options { 
+  padding-top: 35px;
+  padding-bottom: 120px;
+  &__section {
+    margin-bottom: 90px;
+  }
+  &__title {
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 1.5;
+    margin-bottom: 70px;
+    text-align: center;
+  }
+  &__cards {
+    padding-left: 40px;
+    padding-right: 40px;
+    > .row {
+      margin-left: -25px;
+      margin-right: -25px;
+      margin-top: -50px;
+      > * {
+        padding-left: 25px;
+        padding-right: 25px;
+        margin-top: 50px;
+      }
+    }
+  }
+  &__card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border-radius: 30px;
+    background: #FFF;
+    box-shadow: 0px 10px 12px 12px rgba(95, 100, 70, 0.12);
+    color: $text_color;
+    transition: 0.3s;
+    &:hover {
+      box-shadow: 0px 10px 12px 12px rgba(95, 100, 70, 0.15);
+      .options__name {
+        color: $primary_color;
+      }
+    }
+  }
+  &__content {
+    display: flex;
+    padding: 35px 10px 15px 35px;
+  }
+  &__img {
+    margin-right: 5px;
+  }
+  &__icons {
+    width: 100px;
+    margin-left: auto;
+    flex-shrink: 0;
+    > .row {
+      margin-left: -5px;
+      margin-right: -5px;
+      margin-top: -14px;
+      > * {
+        padding-left: 5px;
+        padding-right: 5px;
+        margin-top: 14px;
+      }
+    }
+  }
+  &__icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    img {
+      display: block;
+      margin-bottom: 3px;
+    }
+  }
+  &__name {
+    margin-top: auto;
+    padding: 1px 35px 9px;
+    border-top: 1px solid $primary_color;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    transition: .3s;
+  }
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 320px;
+    padding: 36px 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    border-radius: 16px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 190%;
+    color: $text_color;
+    text-transform: uppercase;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    outline: none;
+    transition: .3s;
+    padding-left: 80px;
+    background-color: #ddd;
+    i {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 54px;
+      height: 54px;
+      border-radius: 16px;
+      fill: $text_color;
+      background-color: #fff;
+      position: absolute;
+      top: 50%;
+      left: 24px;
+      transform: translate(0,-50%);
+      transition: .3s;
+      svg {
+        width: 42px;
+        height: 42px;
+      }
+    }
+    &:hover {
+      background-color: $primary_color;
+    }
+  }
+  @include media-breakpoint-down(xl) {
+    &__cards {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    &__cards {
+      padding-left: 10px;
+      padding-right: 10px;
+      > .row {
+        margin-left: -15px;
+        margin-right: -15px;
+        margin-top: -30px;
+        > * {
+          padding-left: 15px;
+          padding-right: 15px;
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+  @include media-breakpoint-down(md) {
+    padding-top: 7px;
+    &__section {
+      margin-bottom: 5px;
+    }
+    &__title {
+      font-size: 32px;
+      margin-bottom: 47px;
+    }
+    &__content {
+      padding: 15px 10px 1px 20px;
+    }
+    &__icon-item {
+      font-size: 12px;
+    }
+    &__icons {
+      width: 150px;
+      margin-right: auto;
+    }
+    &__btn {
+      max-width: 160px;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      i {
+        width: 32px;
+        height: 32px;
+        border-radius: 8px;
+        svg {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    &__icons {
+      width: 140px;
+      margin-right: 0;
+    }
+    &__icon {
+      width: 24px;
+      height: 24px;
+      margin-bottom: 5px;
+    }
+    &__name {
+      font-size: 24px;
+    }
+  }
+}
+/* /options */
