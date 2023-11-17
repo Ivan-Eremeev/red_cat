@@ -35,12 +35,12 @@
     box-shadow: 0px 10px 12px 12px rgba(95, 100, 70, 0.12);
     color: $text_color;
     transition: 0.3s;
-    &:hover {
-      box-shadow: 0px 10px 12px 12px rgba(95, 100, 70, 0.15);
-      .options__name {
-        color: $primary_color;
-      }
-    }
+    // &:hover {
+    //   box-shadow: 0px 10px 12px 12px rgba(95, 100, 70, 0.15);
+    //   .options__name {
+    //     color: $primary_color;
+    //   }
+    // }
   }
   &__content {
     display: flex;

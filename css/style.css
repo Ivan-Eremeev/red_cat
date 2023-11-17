@@ -7780,13 +7780,6 @@ body.lock {
   -o-transition: 0.3s;
   transition: 0.3s;
 }
-.options__card:hover {
-  -webkit-box-shadow: 0px 10px 12px 12px rgba(95, 100, 70, 0.15);
-  box-shadow: 0px 10px 12px 12px rgba(95, 100, 70, 0.15);
-}
-.options__card:hover .options__name {
-  color: #FCB814;
-}
 .options__content {
   display: -webkit-box;
   display: -ms-flexbox;
